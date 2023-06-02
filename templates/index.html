@@ -12,9 +12,6 @@
 
 <body>
 
-    <div>
-        
-    </div>
     <input type="checkbox" id="chec">
     <label class="form-label" for="chec">
         <img src="{{url_for('static', filename='./assets/icon/barra-de-menu.ico')}}">
@@ -48,12 +45,14 @@
         </center>
         <footer>
             <br>
-            <form action="contato" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" placeholder="Nome">
+            <form action="email" id="form1" method="post">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Insira o e-mail">
                 <label for="whatsapp">Whatsapp:</label>
                 <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp">
-                Dia da Semana: <select name="dia da semana">
+                
+                <label for="diasemana">Dia da Semana:</label>
+                <select name="diasemana">
                     <option>Qual Dia</option>
                     <option value="segunda-feira">Segunda-feira</option>
                     <option value="terça-feira">Terça-feira</option>
@@ -88,6 +87,7 @@
             <p>Desde 2019!</p>
             <img class="footer-logo" src="{{url_for('static', filename='./assets/img/plano de fundo.jpg')}}"  width="50px" height="25px"  alt="Logo da Empresa">
         </footer>
+        <script src="{{url_for('static', filename='./script.js')}}"></script>
 </body>
 
 </html>
