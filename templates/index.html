@@ -46,39 +46,48 @@
                 <p>Entre em contato para marcar um dia pra ir no Brechó</p>
             </div>
         </center>
-        <br>
-        <form action="contato" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome">
-            <label for="whatsapp">Whatsapp:</label>
-            <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp">
-            Dia da Semana: <select name="dia da semana">
-                <option>Qual Dia</option>
-                <option value="segunda-feira">Segunda-feira</option>
-                <option value="terça-feira">Terça-feira</option>
-                <option value="quarta-feira">Quarta-feira</option>
-                <option value="quinta-feira">Quinta-feira</option>
-                <option value="sexta-feira">Sexta-feira</option>
-                <option value="sabádo">Sabádo</option>
-                <option value="domingo">Domingo</option>
-            </select>
-            
-            Horários: <select name="horarios">
-                <option>Qual Horário</option>
-                <option value="11">Entre 11hr e 12hr</option>
-                <option value="12">Entre 12hr e 13hr</option>
-                <option value="14">Entre 13hr e 14hr</option>
-                <option value="14">Entre 14hr e 15hr</option>
-                <option value="15">Entre 15hr e 16hr</option>
-                <option value="16">Entre 16hr e 17hr</option>
-            </select>
-
-            
-            Mensagem:<textarea placeholder="O que você gostou? Me conte!"></textarea>
-            <button type="submit">Enviar</button>
-            
-        </form>
-        <br>
+        <footer>
+            <br>
+            <form action="contato" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome">
+                <label for="whatsapp">Whatsapp:</label>
+                <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp">
+                Dia da Semana: <select name="dia da semana">
+                    <option>Qual Dia</option>
+                    <option value="segunda-feira">Segunda-feira</option>
+                    <option value="terça-feira">Terça-feira</option>
+                    <option value="quarta-feira">Quarta-feira</option>
+                    <option value="quinta-feira">Quinta-feira</option>
+                    <option value="sexta-feira">Sexta-feira</option>
+                    <option value="sabádo">Sabádo</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+                
+                
+                <label for="horarios">Horários:</label>
+                <select name="horarios">
+                    <option>Qual Horário</option>
+                    <option value="11">Entre 11hr e 12hr</option>
+                    <option value="12">Entre 12hr e 13hr</option>
+                    <option value="14">Entre 13hr e 14hr</option>
+                    <option value="14">Entre 14hr e 15hr</option>
+                    <option value="15">Entre 15hr e 16hr</option>
+                    <option value="16">Entre 16hr e 17hr</option>
+                </select>
+    
+                
+               
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" placeholder="O que você gostou? Me conte!"></textarea>
+                <button type="submit">Enviar</button>
+                
+            </form>
+            <br>
+            <p>Email: brecho_monica@brechomonica.com.br</p>
+            <p>Desde 2019!</p>
+            <img class="footer-logo" src="{{url_for('static', filename='./assets/img/plano de fundo.jpg')}}"  width="50px" height="25px"  alt="Logo da Empresa">
+        </footer>
 </body>
 
 </html>
