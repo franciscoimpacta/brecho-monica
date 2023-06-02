@@ -10,7 +10,7 @@ app = Flask(__name__)
 # app.config['MAIL_PASSWORD'] = 'Fran4459993067'
 # app.config['MAIL_USE_TLS'] = False
 # app.config['MAIL_USE_SSL'] = True
-mail = Mail(app)
+# mail = Mail(app)
 @app.route("/")
 def index():
     return render_template("index.html")
