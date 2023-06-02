@@ -1,77 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="pr-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Minha Página</title>
-  <style>
-    /* Estilos para o header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-image: url("caminho_para_imagem_de_fundo.jpg");
-      padding: 20px;
-    }
-
-    .logo {
-      width: 100px;
-    }
-
-    /* Estilos para o body */
-    .container {
-      display: flex;
-      height: 400px;
-    }
-
-    .menu {
-      width: 200px;
-      background-color: lightgray;
-      padding: 20px;
-    }
-
-    .content {
-      flex: 1;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Estilos para o footer */
-    footer {
-      background-color: lightgray;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      width: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='logo.jpg')}}"/>
+    <title>Brechó da Mônica</title>
 </head>
+
 <body>
-  <header>
-    <h1>Título</h1>
-    <img class="logo" src="caminho_para_logo.jpg" alt="Logo da Empresa">
-  </header>
 
-  <div class="container">
-    <div class="menu">
-      <ul>
-        <li>Opção 1</li>
-        <li>Opção 2</li>
-        <li>Opção 3</li>
-      </ul>
+    <div>
+        
     </div>
-    <div class="content">
-      <h2>Conteúdo</h2>
-      <p>Texto do conteúdo...</p>
-      <a href="link_para_video_no_youtube">Assistir vídeo</a>
-    </div>
-  </div>
+    <input type="checkbox" id="chec">
+    <label class="form-label" for="chec">
+        <img src="{{url_for('static', filename='./assets/icon/barra-de-menu.ico')}}">
+    </label>
 
-  <footer>
-    <p>Email: info@empresa.com</p>
-    <p>Data: 2 de Junho de 2023</p>
-    <img class="footer-logo" src="caminho_para_logo_da_empresa.jpg" alt="Logo da Empresa">
-  </footer>
+
+    <nav style:"position: absolute;">
+        <ul>
+            <li><a href="/roupas">Roupas</a></li>
+            <li><a href="/calcas">Calças</a></li>
+        </ul>
+    </nav>
+
+    <center>
+        <img src="{{url_for('static', filename='./assets/img/plano de fundo.jpg')}}">
+    </center>
+    <br>
+    <div class="ladoalado">
+        <div class="zoom">
+            <img src="{{url_for('static', filename='./assets/img/20211208_162019.png')}}" width="300px" height="450px">
+        </div>
+        <div class="zoom">
+            <img src="{{url_for('static', filename='./assets/img/20211208_162027.png')}}" width="300px" height="450px">
+        </div>
+    </div>
+        <br>
+        <center>
+            <div class="fale">
+                <p>Entre em contato para marcar um dia pra ir no Brechó</p>
+            </div>
+        </center>
+        <br>
+        <form action="contato" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+            <label for="whatsapp">Whatsapp:</label>
+            <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp">
+            Dia da Semana: <select name="dia da semana">
+                <option>Qual Dia</option>
+                <option value="segunda-feira">Segunda-feira</option>
+                <option value="terça-feira">Terça-feira</option>
+                <option value="quarta-feira">Quarta-feira</option>
+                <option value="quinta-feira">Quinta-feira</option>
+                <option value="sexta-feira">Sexta-feira</option>
+                <option value="sabádo">Sabádo</option>
+                <option value="domingo">Domingo</option>
+            </select>
+            
+            Horários: <select name="horarios">
+                <option>Qual Horário</option>
+                <option value="11">Entre 11hr e 12hr</option>
+                <option value="12">Entre 12hr e 13hr</option>
+                <option value="14">Entre 13hr e 14hr</option>
+                <option value="14">Entre 14hr e 15hr</option>
+                <option value="15">Entre 15hr e 16hr</option>
+                <option value="16">Entre 16hr e 17hr</option>
+            </select>
+
+            
+            Mensagem:<textarea placeholder="O que você gostou? Me conte!"></textarea>
+            <button type="submit">Enviar</button>
+            
+        </form>
+        <br>
 </body>
+
 </html>
